@@ -29,7 +29,7 @@
     "deepmerge-ts": "^8.0.1"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "0.125.0",
+    "@anthropic-ai/sdk": "0.126.0",
     "@auth/prisma-adapter": "^2.11.2",
     "@aws-sdk/client-bedrock-runtime": "3.1132.0",
     "@azure/identity": "^4.13.1",
