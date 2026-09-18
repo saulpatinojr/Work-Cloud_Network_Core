@@ -60,7 +60,7 @@
     "eslint-config-next": "16.3.1",
     "postcss": "^8.5.23",
     "prisma": "^6.3.1",
-    "tailwindcss": "^4.3.0",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "vitest": "5.0.0"
   }
