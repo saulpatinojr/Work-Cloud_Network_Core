@@ -18,12 +18,12 @@ dependencies = [
     # In 1.x, AIProjectClient.agents returns an AgentsClient from the separate
     # azure-ai-agents package, so that must be declared too — it is what actually
     # provides the operations.
-    "azure-ai-projects>=1.0.0,<2",       # Foundry Agent Service: recommendation enrichment
+    "azure-ai-projects>=2.6.1,<3",       # Foundry Agent Service: recommendation enrichment
     "azure-ai-agents>=1.1.0,<2",         # provides AIProjectClient.agents in 1.x
-    "azure-mgmt-network>=31.0.1",
+    "azure-mgmt-network>=32.0.0",
     "azure-mgmt-resource>=26.0.0",
     "azure-mgmt-subscription>=3.1.1",
-    "azure-storage-blob>=12.30.0",       # Phase F: Azure Blob Storage deployer
+    "azure-storage-blob>=12.30.1",       # Phase F: Azure Blob Storage deployer
     "openai>=2.45.0",
     "anthropic>=1.5.0",                  # bring-your-own Claude engine (CNA_AI_MODE=byo-api)
     # Reads the AES-256-GCM credential blobs the web tier writes (BYO AI keys).
@@ -72,11 +72,11 @@ cna = "cna.cli.main:cli"
 # Upper bounds are set on all ten for the same reason — see T-413 for the same
 # failure already present in a declared dependency.
 enrichment = [
-    "azure-mgmt-managementgroups>=1.0.0,<2",  # management-group hierarchy
-    "azure-mgmt-monitor>=6.0.2,<7",           # alert counts, diagnostic settings
-    "azure-mgmt-costmanagement>=4.0.1,<5",    # FinOps cost queries
+    "azure-mgmt-managementgroups>=2.0.0,<3",  # management-group hierarchy
+    "azure-mgmt-monitor>=7.0.0,<8",           # alert counts, diagnostic settings
+    "azure-mgmt-costmanagement>=5.0.0,<6",    # FinOps cost queries
     "azure-monitor-query>=2.0.0,<3",          # network traffic analytics
-    "azure-mgmt-compute>=38.2.0,<39",         # NVA discovery
+    "azure-mgmt-compute>=38.3.0,<39",         # NVA discovery
     "azure-mgmt-security>=7.0.0,<8",          # Defender for Cloud posture
     "azure-mgmt-privatedns>=2.0.0,<3",        # private DNS zone discovery
     "azure-mgmt-loganalytics>=14.0.0,<15",    # Log Analytics workspace lookup
