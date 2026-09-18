@@ -10,7 +10,7 @@ requires-python = ">=3.11"
 dependencies = [
     "click>=8.4.2",
     "rich>=15.0.0",
-    "boto3>=1.43.40",
+    "boto3>=1.43.95",
     "azure-identity>=1.25.3",
     # Pinned to 1.x deliberately (TODO.md T-413). FoundryAgentClient drives
     # agents.threads / .messages / .runs, which is the 1.x surface; 2.x replaced
