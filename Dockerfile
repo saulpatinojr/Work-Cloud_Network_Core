@@ -9,7 +9,7 @@
 #   7. .dockerignore referenced — see .dockerignore in repo root
 
 # python:3.14-slim digest pinned 2026-08-28 (refreshed for the 2026-08 OpenSSL DSA)
-FROM python:3.14-slim@sha256:cae66f2ef0ec51a9891263eeee7f987dacf0a9879e8aa9353d5606e0530619a5 AS builder
+FROM python:3.14-slim@sha256:cad9a2c871761c413caa6fdd6441c783451e740a48aaeba60ae62a8b53525ef6 AS builder
 
 ARG CNA_VERSION=dev
 WORKDIR /build
@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir --prefix=/install .
 # the final image. The export pipeline (cna/diagram_engine/export_pipeline.py)
 # degrades to XML-only output without it — its own warning promises the CLI
 # is available "inside the Docker container", which is made true here.
-FROM python:3.14-slim@sha256:cae66f2ef0ec51a9891263eeee7f987dacf0a9879e8aa9353d5606e0530619a5 AS drawio-fetch
+FROM python:3.14-slim@sha256:cad9a2c871761c413caa6fdd6441c783451e740a48aaeba60ae62a8b53525ef6 AS drawio-fetch
 
 ARG DRAWIO_VERSION=31.3.2
 ARG DRAWIO_SHA256=725453f32ef7f2f63f8b50b374857a5c312e2aaabcf221cb0600332741ae1094
@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certifi
   && echo "${DRAWIO_SHA256}  /tmp/drawio.deb" | sha256sum -c -
 
 # ---- final stage ----
-FROM python:3.14-slim@sha256:cae66f2ef0ec51a9891263eeee7f987dacf0a9879e8aa9353d5606e0530619a5
+FROM python:3.14-slim@sha256:cad9a2c871761c413caa6fdd6441c783451e740a48aaeba60ae62a8b53525ef6
 
 ARG CNA_VERSION=dev
 LABEL org.opencontainers.image.title="CNA Platform" \
